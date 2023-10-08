@@ -1,0 +1,38 @@
+﻿@model BASE_COBRANZAS_V2.Models.Beans.Apoderado
+
+@{
+  
+    ViewData["Title"] = "Apoderado";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+
+<h1 class="font-weight-bold text-center">Registrar</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none">
+                <label asp-for="ID_APODERADO" class="control-label"></label>
+                <input asp-for="ID_APODERADO" class="form-control" />
+                <span asp-validation-for="ID_APODERADO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOMBRE_APODERADO" class="control-label">Nombre del apoderado</label>
+                <input asp-for="NOMBRE_APODERADO" class="form-control" />
+                <span asp-validation-for="NOMBRE_APODERADO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="listar_Apoderado" class="btn btn-toolbar">Cancelar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

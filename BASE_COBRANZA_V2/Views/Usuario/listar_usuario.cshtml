@@ -1,0 +1,82 @@
+﻿@model IEnumerable<BASE_COBRANZAS_V2.Models.Beans.Usuario>
+
+@{
+    ViewData["Title"] = "Usuario";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+<h1 class="font-weight-bold text-center">Usuario</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Usuario
+            </th>
+            <th>
+                Contraseña
+            </th>
+            <th>
+                Roles
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID_USUARIO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMBRE_USUARIO)
+                </td>
+                <td>
+                    *****
+                </td>
+                <td>
+                    @foreach (var rol in item.roles)
+                    {
+                        <h7>@rol.NOMBRE</h7>
+                        <br />
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id=item.ID_USUARIO },new{@class="btn btn-primary",@role="button"}) |
+                    <a onclick="confirmDelete('@item.ID_USUARIO')" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts {
+    <script>
+        function confirmDelete(id) {
+            Swal.fire({
+                title: "¿Seguro que quieres eliminar?",
+                text: "Esta acción no se puede deshacer",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Sí, eliminar",
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirige a la acción Delete con el id del procurador
+                    $.post({
+                        url: "/Usuario/Delete?ID_USUARIO=" + id,  // Corrección aquí
+                        success: function (r) {
+                            window.location = "/Usuario/listar_usuario";  // Corrección aquí
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+}

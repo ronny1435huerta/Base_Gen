@@ -1,0 +1,89 @@
+﻿@model BASE_COBRANZAS_V2.Models.Beans.Usuario
+
+@{
+    ViewData["Title"] = "Usuario";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+<h1 class="font-weight-bold text-center">Editar</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none">
+                <label asp-for="ID_USUARIO" class="control-label"></label>
+                <input asp-for="ID_USUARIO" class="form-control" />
+                <span asp-validation-for="ID_USUARIO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOMBRE_USUARIO" class="control-label">Usuario</label>
+                <input asp-for="NOMBRE_USUARIO" class="form-control" />
+                <span asp-validation-for="NOMBRE_USUARIO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CONTRA_USUARIO" class="control-label">Contraseña</label>
+                <input asp-for="CONTRA_USUARIO" class="form-control" />
+                <span asp-validation-for="CONTRA_USUARIO" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <br />
+                <h4>Roles asignados</h4>
+                @foreach (var roles in Model.roles)
+                {
+                    <div class="caja">
+                        <h7>@roles.NOMBRE</h7>
+                        <a onclick="confirmDelete('@roles.NOMBRE','@Model.ID_USUARIO')" class="btn btn-danger">Eliminar</a>
+                    </div>
+                    <br />
+                }
+                </br>
+                <div class="caja">
+                    @Html.ActionLink("Asignar Rol", "AsignarRol", "Usuario", new { ID_USUARIO=Model.ID_USUARIO },new{@class="btn btn-success",@role="button"})
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-primary" />
+                    </div>
+               </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="listar_usuario" class="btn btn-toolbar">Cancelar</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function confirmDelete(NOMBRE, ID_USUARIO) {
+            Swal.fire({
+                title: "¿Seguro que quieres eliminar?",
+                text: "Esta acción no se puede deshacer",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Sí, eliminar",
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Realiza la solicitud AJAX con los parámetros
+                    $.post({
+                        url: "/Usuario/Delete_Rol",  // Ruta al controlador
+                        data: { NOMBRE: NOMBRE, ID_USUARIO: ID_USUARIO }, // Parámetros
+                        success: function (r) {
+                            window.location = "/Usuario/listar_usuario"; // Redirige con el ID_PROCURADOR
+                        }
+                    });
+                }
+            });
+        }
+
+    </script>
+}

@@ -1,0 +1,10 @@
+﻿.table-container table {
+    width: 100%;
+}
+
+.table-container td {
+    max-width: 150px; /* Establece un ancho máximo para las celdas */
+    white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Agrega puntos suspensivos para contenido largo */
+}

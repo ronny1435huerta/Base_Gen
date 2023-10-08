@@ -1,0 +1,39 @@
+﻿@model BASE_COBRANZAS_V2.Models.Beans.Pasos_cobranza
+
+@{
+    ViewData["Title"] = "Pasos de cobranza";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+
+<h1 class="font-weight-bold text-center">Registrar</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none">
+                <label asp-for="ID_PASOS_COBRANZA" class="control-label"></label>
+                <input asp-for="ID_PASOS_COBRANZA" class="form-control" />
+                <span asp-validation-for="ID_PASOS_COBRANZA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ACCION" class="control-label"></label>
+                <input asp-for="ACCION" class="form-control" />
+                <span asp-validation-for="ACCION" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="listar_pasos_cobranza" class="btn btn-toolbar">Cancelar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

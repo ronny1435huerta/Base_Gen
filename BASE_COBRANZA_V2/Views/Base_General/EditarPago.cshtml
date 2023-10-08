@@ -1,0 +1,62 @@
+﻿@model BASE_COBRANZA_V2.Models.Beans.Pago
+@{
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditarPago">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID_PAGO" class="control-label"></label>
+                <input asp-for="ID_PAGO" class="form-control" />
+                <span asp-validation-for="ID_PAGO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_BASE" class="control-label"></label>
+                <input asp-for="ID_BASE" class="form-control" />
+                <span asp-validation-for="ID_BASE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MONTO" class="control-label"></label>
+                <input asp-for="MONTO" class="form-control" />
+                <span asp-validation-for="MONTO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TIPO_PAGO" class="control-label"></label>
+                <input asp-for="TIPO_PAGO" class="form-control" />
+                <span asp-validation-for="TIPO_PAGO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CUENTA_BANCARIA" class="control-label"></label>
+                <input asp-for="CUENTA_BANCARIA" class="form-control" />
+                <span asp-validation-for="CUENTA_BANCARIA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NUMERO_OPERACION" class="control-label"></label>
+                <input asp-for="NUMERO_OPERACION" class="form-control" />
+                <span asp-validation-for="NUMERO_OPERACION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FECHA_PAGO" class="control-label"></label>
+                <input asp-for="FECHA_PAGO" class="form-control" />
+                <span asp-validation-for="FECHA_PAGO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="INSTANCIA_PAGO" class="control-label"></label>
+                <input asp-for="INSTANCIA_PAGO" class="form-control" />
+                <span asp-validation-for="INSTANCIA_PAGO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

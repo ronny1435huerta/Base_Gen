@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BASE_COBRANZAS_V2.Models.Beans.Tipo_impulso>
+
+@{
+    ViewData["Title"] = "Tipo de Impulso";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+<h1 class="font-weight-bold text-center">Tipo Impulso</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tipo Impulso
+            </th>
+            <th>
+                Accion
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_TIPO_IMPULSO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ACCION)
+            </td>
+            <td>
+                    @Html.ActionLink("Editar", "Edit", new { id=item.ID_TIPO_IMPULSO},new{@class="btn btn-primary",@role="button"}) |
+                    <a onclick="confirmDelete('@item.ID_TIPO_IMPULSO')" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

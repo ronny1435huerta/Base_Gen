@@ -1,0 +1,38 @@
+﻿@model BASE_COBRANZA_V2.Models.Beans.Procurador_Distrito
+
+@{
+    ViewData["Title"] = "Procuradores";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+<h1 class="font-weight-bold text-center">Asignar distritos</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AsignarDistrito">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none">
+                <label asp-for="ID_PROCURADOR" class="control-label"></label>
+                <input asp-for="ID_PROCURADOR" class="form-control" />
+                <span asp-validation-for="ID_PROCURADOR" class="text-danger"></span>
+            </div>            
+            <div class="form-group">
+                <label asp-for="ID_DISTRITO" class="control-label">Distrito</label>
+                <select asp-for="ID_DISTRITO" asp-items="@ViewBag.Distritos_disponibles"></select>
+                <span asp-validation-for="ID_DISTRITO" class="text-danger"></span>
+            </div>
+            </br>
+            <div class="form-group">
+                <input type="submit" value="Asignar" class="btn btn-info"/> 
+                @Html.ActionLink("Regresar", "Edit", new { id=Model.ID_PROCURADOR },new{@class="btn btn-secondary",@role="button"})
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

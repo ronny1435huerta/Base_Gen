@@ -1,0 +1,43 @@
+﻿@model IEnumerable<BASE_COBRANZAS_V2.Models.Beans.Rol>
+
+@{
+    ViewData["Title"] = "Roles";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+<h1 class="font-weight-bold text-center">Roles</h1>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_ROL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOMBRE)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID_ROL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMBRE)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Editar", "Edit", new { id=item.ID_ROL },new{@class="btn btn-primary",@role="button"}) |
+                    <a onclick="confirmDelete('@item.ID_ROL')" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

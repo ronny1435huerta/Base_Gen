@@ -1,0 +1,302 @@
+﻿@model BASE_COBRANZA_V2.Models.Beans.Base_Stock
+
+@{
+    ViewData["Title"] = "Cobranza Extrajudicial";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+<div class="container">
+    <h1 class="font-weight-bold text-center">Detalle</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Álbum</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.ALBUM)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body ">
+            <h5 class="card-title">Fecha de consignación</h5>
+            <p class="card-text">@Model.FECHA_CONSIGNACION.ToShortDateString()</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Marca</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.MARCA)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body ">
+            <h5 class="card-title">Modelo</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.MODELO)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Precio pactado</h5>
+            <p class="card-text">$@Html.DisplayFor(model => model.PRECIO_PACTADO)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body ">
+            <h5 class="card-title">Contrato</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.CONTRATO)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">DNI</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.DNI)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Nombre del propietario</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.NOMBRE_PROPIETARIO)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Tipo</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.TIPO)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Celular</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.CELULAR)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Correo</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.CORREO)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Dirección</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.DIRECCION)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Distrito</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.DISTRITO)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Tipo de penalidad</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.TIPO_PENALIDAD)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Pagaré</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.PAGARE)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Fecha de cobro</h5>
+            <p class="card-text">@Model.FechaCobro.ToShortDateString()</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Status del cliente</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.IdStatusCliente)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Fecha de ingreso</h5>
+            <p class="card-text">@Model.FechaIngreso.ToShortDateString()</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Fecha de arbitraje</h5>
+            <p class="card-text">@Model.FechaArbitraje.ToShortDateString()</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Penalidad</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.Penalidad)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Mora diaria</h5>
+            <p class="card-text">$@Html.DisplayFor(model => model.Mora)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Gastos de cobranza</h5>
+            <p class="card-text">$@Html.DisplayFor(model => model.GastosCobranza)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Gastos de cochera</h5>
+            <p class="card-text">$@Html.DisplayFor(model => model.GastosCochera)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Status SUNARP</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.StatusSunarp)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Marca del auto cautelar</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.MarcaAutoCautelar)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Modelo del auto cautelar</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.ModeloAutoCautelar)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Fecha del auto cautelar</h5>
+            <p class="card-text">@Model.FechaAutoCautelar.ToShortDateString()</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Partida registral del auto cautelar</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.PartidaRegistralAutoCautelar)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Placa auto cautelar</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.PlacaAutoCautelar)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Status Interno de Medida Cautelar</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.IdStatusJudicial)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Status del Poder Judicial de Medida Cautelar</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.IdStatusPoderJudicial)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Status de cobranza</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.IdPasosCobranza)</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Fecha de ingreso de la medida cautelar</h5>
+            <p class="card-text">@Model.FechaIngresoMc.ToShortDateString()</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Fecha del concesorio</h5>
+            <p class="card-text">@Model.FechaConcesorio.ToShortDateString()</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Procurador</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.IdProcurador)</p>
+        </div>
+    </div>
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Tipo del juzgado</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.TipoJuzgado)</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Distrito del juzgado</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.DistritoJuzgado)</p>
+        </div>
+    </div>
+
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Número de juzgado</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.NumeroDeJuzgado)</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Número de expediente</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.NumeroExpediente)</p>
+        </div>
+    </div>
+
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Código cautelar</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.CodigoCautelar)</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Nombre del especialista</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.NombreEspecialista)</p>
+        </div>
+    </div>
+
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Monto petitorio</h5>
+            <p class="card-text">$@Html.DisplayFor(model => model.MontoPetitorio)</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Tipo de impulso</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.IdTipoImpulso)</p>
+        </div>
+    </div>
+
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Tipo de solicitud de medida cautelar</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.TipoSolicitudMedidaCautelar)</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Respuesta de medida cautelar</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.RespuestaMedidaCautelar)</p>
+        </div>
+    </div>
+
+    <div class="card bg-dark text-white">
+        <div class="card-body">
+            <h5 class="card-title">Observaciones</h5>
+            <p class="card-text">@Html.DisplayFor(model => model.Observaciones)</p>
+        </div>
+    </div>
+    <br />
+    <div>
+        <a asp-action="listar_cobranza" class="btn btn-warning">Regresar</a>
+    </div>
+
+</div>
+

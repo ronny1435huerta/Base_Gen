@@ -1,0 +1,126 @@
+﻿@model IEnumerable<BASE_COBRANZA_V2.Models.Beans.Base_General>
+
+@{
+    ViewData["Title"] = "Medidas cautelares";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+    var stocks = ViewBag.stock as IEnumerable<BASE_COBRANZA_V2.Models.Beans.Stock>;
+    var cobranza = ViewBag.cobranza as IEnumerable<BASE_COBRANZAS_V2.Models.Beans.Pasos_cobranza>;
+    decimal? Gasto_clientes_total = 0;
+    @foreach (var item in Model)
+    {
+        Gasto_clientes_total += item.GastosCobranza + item.GastosCochera_Total + item.Penalidad + item.Mora_Total;
+    }
+}
+
+<h1 class="font-weight-bold text-center">Medidas cautelares</h1>
+<br />
+<div class="caja">
+    <form asp-controller="Medidas_Cautelares" asp-action="listar_mc">
+        <p>
+            Buscar Album: <input type="number" name="Album" class="form-number" />
+            <input type="submit" value="Buscar" class="btn btn-sm btn-dark" />
+        </p>
+    </form>
+    <p>Total: $@Gasto_clientes_total</p>
+</div>
+
+<div class="table-responsive">
+<table class="table">
+    <thead>
+        <tr class="table-danger">
+        <th class="text-center">
+            Album
+        </th>
+        <th class="text-center">
+            Fecha de consignación
+        </th>
+        <th class="text-center">
+            Número de contrato
+        </th>
+        <th class="text-center">Nombre del propietario</th>
+        <th class="text-center">
+            Celular
+        </th>
+        <th class="text-center">
+            Tipo de penalidad
+        </th>
+        <th class="text-center">
+            Pagaré
+        </th>
+        <th class="text-center">
+            Fecha de cobro
+        </th>
+        <th class="text-center">
+            Penalidad
+        </th>
+        <th class="text-center">
+            Mora
+        </th>
+        <th class="text-center">
+            Gasto total
+        </th>
+        <th class="text-center">Status de cobranza</th>
+        <th></th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+                var stockItem = stocks.FirstOrDefault(stock => stock.ID_STOCK == item.IdStock);
+                var pasoscobranza = cobranza.FirstOrDefault(cobranzas => cobranzas.ID_PASOS_COBRANZA == item.IdPasosCobranza);
+                <tr>
+                    @if (stockItem != null)
+                    {
+                        <td>
+                            @stockItem.ALBUM
+                        </td>
+                        <td>
+                            @stockItem.FECHA_CONSIGNACION.ToShortDateString()
+                        </td>
+                        <td>
+                            @stockItem.CONTRATO
+                        </td>
+                        <td style="white-space: nowrap;" class="text-center">
+                            @stockItem.NOMBRE_PROPIETARIO
+                        </td>
+                        <td>
+                            @stockItem.CELULAR
+                        </td>
+                        <td>
+                            @stockItem.TIPO_PENALIDAD
+                        </td>
+                        <td>
+                            @stockItem.PAGARE
+                        </td>
+                    }
+                    <td>
+                        @item.FechaCobro.ToShortDateString()
+                    </td>
+                    <td>
+                        $@item.Penalidad
+                    </td>
+                    <td>
+                        $@item.Mora_Total
+                    </td>
+                    <td>
+                        @{
+                            decimal? gastoTotal = item.Mora_Total + item.GastosCochera_Total + item.GastosCobranza + item.Penalidad;
+                        }
+                        $@gastoTotal
+                    </td>
+                    @if (pasoscobranza != null)
+                    {
+                   <td>
+                       @pasoscobranza.ACCION
+                   </td>
+                    }
+                    <td>
+                    @Html.ActionLink(" Editar", "Edit", new { id=item.IdBase },new{@class="btn btn-primary bx bx-pencil",@role="button"})
+                    </td>
+                    <td>@Html.ActionLink(" Detalle", "Detail", new { id=item.IdBase}, new{@class="btn btn-success bx bx-detail",@role="button"}) </td>
+                
+        </tr>
+}
+    </tbody>
+</table>
+</div>

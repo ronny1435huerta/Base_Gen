@@ -1,0 +1,64 @@
+﻿@model IEnumerable<BASE_COBRANZAS_V2.Models.Beans.Apoderado>
+
+@{
+    ViewData["Title"] = "Apoderado";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+<h1 class="font-weight-bold text-center">Apoderados</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               CÓDIGO
+            </th>
+            <th>
+                NOMBRE
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_APODERADO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOMBRE_APODERADO)
+            </td>
+            <td>
+                    @Html.ActionLink("Editar", "Edit", new { id=item.ID_APODERADO },new{@class="btn btn-primary",@role="button"}) |
+                    <a onclick="confirmDelete('@item.ID_APODERADO')" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@section scripts {
+    <script>
+        function confirmDelete(id) {
+            Swal.fire({
+                title: "¿Seguro que quieres eliminar?",
+                text: "Esta acción no se puede deshacer",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Sí, eliminar",
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirige a la acción Delete con el id del procurador
+                    $.post({
+                        url: "/Apoderado/Delete?ID_APODERADO=" + id,  // Corrección aquí
+                        success: function (r) {
+                            window.location = "/Apoderado/listar_Apoderado";  // Corrección aquí
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+}

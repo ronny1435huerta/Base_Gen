@@ -1,0 +1,82 @@
+﻿@model BASE_COBRANZAS_V2.Models.Beans.Procurador;
+
+@{
+    ViewData["Title"] = "Procuradores";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+<h1 class="font-weight-bold text-center">Editar procurador</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none">
+                <label asp-for="ID_PROCURADOR" class="control-label"></label>
+                <input asp-for="ID_PROCURADOR" class="form-control" />
+                <span asp-validation-for="ID_PROCURADOR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOMBRE_PROCURADOR" class="control-label">Nombre del procurador</label>
+                <input asp-for="NOMBRE_PROCURADOR" class="form-control" />
+                <span asp-validation-for="NOMBRE_PROCURADOR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <br />
+                <h4>Distritos asignados</h4>
+                @foreach (var distrito in Model.DISTRITOS)
+                {
+                    <div class="caja">
+                    <h7>@distrito.NOMBRE</h7>                    
+                        <a onclick="confirmDelete('@distrito.NOMBRE','@Model.ID_PROCURADOR')" class="btn btn-danger">Eliminar</a>
+                    </div>
+                    <br />
+                }
+                </br>
+                <div class="caja">
+                    @Html.ActionLink("Asignar Distrito", "AsignarDistrito", "Procurador", new { ID_PROCURADOR=Model.ID_PROCURADOR },new{@class="btn btn-success",@role="button"})
+                <div class="form-group">
+                    <input type="submit" value="Guardar" class="btn btn-primary" />
+                </div>
+                <div>
+                    <a asp-action="listar_procuradores" class="btn btn-toolbar">Cancelar</a>
+                </div>
+                </div>
+            </div>
+            </br>
+            
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function confirmDelete(NOMBRE, ID_PROCURADOR) {
+            Swal.fire({
+                title: "¿Seguro que quieres eliminar?",
+                text: "Esta acción no se puede deshacer",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Sí, eliminar",
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Realiza la solicitud AJAX con los parámetros
+                    $.post({
+                        url: "/Procurador/Delete_Distrito",  // Ruta al controlador
+                        data: { NOMBRE: NOMBRE, ID_PROCURADOR: ID_PROCURADOR }, // Parámetros
+                        success: function (r) {
+                            window.location = "/Procurador/listar_procuradores"; // Redirige con el ID_PROCURADOR
+                        }
+                    });
+                }
+            });
+        }
+
+    </script>
+}

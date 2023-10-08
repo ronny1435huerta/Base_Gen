@@ -1,0 +1,355 @@
+﻿/*------------------------------------------------------------------Creado: Ronny Huerta-----------------------------------------------------------------------------------------*/
+/*Importamos desde Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    font-family: 'Poppins', sans-serif !important;
+    
+}
+
+.sidebarR {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    width: 260px !important;
+    background: #000000 !important;
+    z-index: 100 !important;
+    transition: all 0.5s ease !important;
+}
+.containerR {
+    width: 100%;
+    max-width: 1200px; /* Cambia este valor según tus necesidades */
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+    .sidebarR.closeR .logoR-details .logoR-name,
+    .sidebarR.closeR .logoR-details img {
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transition-delay: 0s !important;
+    }
+
+    .sidebarR.closeR {      
+        width: 78px !important;
+    }
+
+    .sidebarR .custom-navR-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sidebarR .logoR-details {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebarR .profileR-details {
+        position: fixed;
+        bottom: 0;
+        width: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: normal;
+        background: #1d1b31;
+        padding: 6px 0;
+        max-height: calc(100% - 60px);
+        transition: all 0.4s ease;
+    }
+
+    .sidebarR.closeR .profileR-details {
+        background: none;
+    }
+
+    .sidebarR.closeR .profileR-details {
+        width: 78px;
+    }
+
+    .sidebarR .profileR-details img {
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+        border-radius: 16px;
+        margin: 0 14px 0 12px;
+        background: #1d1b31;
+        padding: 10px;
+        transition: all 0.5s ease;
+    }
+
+    .sidebarR.closeR .profileR-details img {
+        padding: 10px;
+    }
+
+    .sidebarR .profileR-details .profileR_name,
+    .sidebarR .profileR-details .jobR {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    .sidebarR.closeR .profileR-details i,
+    .sidebarR.closeR .profileR-details .profileR_name,
+    .sidebarR.closeR .profileR-details .jobR {
+        display: none !important;
+    }
+
+    .sidebarR .profileR-details .jobR {
+        font-size: 12px;
+    }
+
+    .sidebarR .profileR-details .profileR-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebarR .logoR-details img {
+        font-size: 30px;
+        color: #fff;
+        height: 50px;
+        min-width: 78px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .sidebarR .logoR-details .logoR-name {
+        font-size: 22px;
+        color: #fff;
+        font-weight: 600;
+        transition: 0.3s ease;
+        transition-delay: 0.1s;
+    }
+
+    .sidebarR .custom-navR-links {
+        height: 100%;
+        padding-top: 30px 0 150px 0;
+        overflow: auto;
+      
+    }
+
+    .sidebarR.closeR .custom-navR-links {
+        overflow: visible;
+    }
+
+    .sidebarR .custom-navR-links li {
+        position: relative;
+        list-style: none;
+        transition: all 0.4s ease;
+    }
+
+        .sidebarR .custom-navR-links li.showMenu .subR-menu {
+            display: block;
+        }
+
+        .sidebarR .custom-navR-links li .subR-menu .blankR {
+            opacity: 1;
+            pointer-events: auto;
+            padding: 3px 20px 6px 16px;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0s;
+        }
+
+        .sidebarR .custom-navR-links li:hover .subR-menu .blankR {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .sidebarR .custom-navR-links li.showMenu i.arrow {
+            transform: rotate(-180deg);
+        }
+
+    .sidebarR.closeR .custom-navR-links i.arrow {
+        display: none;
+    }
+
+    .sidebarR .custom-navR-links li:hover {
+        background: #000000;
+    }
+
+    .sidebarR .custom-navR-links li .icon-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sidebarR.closeR .custom-navR-links li .icon-link {
+        display: block;
+    }
+
+    .sidebarR .custom-navR-links li i {
+        height: 50px;
+        min-width: 78px;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .sidebarR .custom-navR-links li .subR-menu {
+        padding: 6px 6px 14px 80px;
+        margin-top: -2px;
+        background: #11101d;
+        display: none;
+    }
+
+    .sidebarR.closeR .custom-navR-links li .subR-menu {
+        position: absolute;
+        left: 100%;
+        top: -10px;
+        margin-top: 0;
+        padding: 10px 20px;
+        border-radius: 0 6px 6px 0;
+        transition: 0s;
+        opacity: 0;
+        display: block;
+        pointer-events: none;
+    }
+
+    .sidebarR.closeR .custom-navR-links li:hover .subR-menu {
+        top: 0;
+        opacity: 1;
+        pointer-events: auto;
+        transition: all 0.4s ease;
+    }
+
+    .sidebarR .custom-navR-links li .subR-menu .linkR_name {
+        display: none;
+    }
+
+    .sidebarR.closeR .custom-navR-links li .subR-menu .linkR_name {
+        font-size: 18px;
+        opacity: 1;
+        display: block;
+    }
+
+    .sidebarR .custom-navR-links li .subR-menu a {
+        font-size: 15px;
+        padding: 5px 0;
+        color: #fff;
+        white-space: nowrap;
+        opacity: 0.6;
+        transition: all 0.3s ease;
+    }
+
+        .sidebarR .custom-navR-links li .subR-menu a:hover {
+            opacity: 1;
+        }
+
+    .sidebarR .custom-navR-links li a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+        .sidebarR .custom-navR-links li a .linkR_name {
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+    .sidebarR.closeR .custom-navR-links li a .linkR_name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+.homeR-section {
+    position: relative;
+    background: #E4E9F7;
+    min-height: 100vh;
+    left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+}
+
+.sidebarR.closeR ~ .homeR-section {
+    left: 78px;
+    width: calc(100% - 78px);
+    
+}
+
+.homeR-section .homeR-content {
+    height: 60px;
+    display: flex;
+    align-items: center;
+ 
+}
+
+
+    .homeR-section .homeR-content .bx-menu,
+    .homeR-section .homeR-content .textR {
+        color: #11101d;
+        font-size: 35px;
+    }
+
+    .homeR-section .homeR-content .bx-menu {
+        margin: 0 15px;
+        cursor: pointer;
+    }
+
+    .homeR-section .homeR-content .textR {
+        font-size: 25px;
+        font-weight: 600;
+    }
+ol, ul {
+    padding-left: 0; /* Anula el relleno izquierdo de Bootstrap */
+}
+.caja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Estilo base para los botones de página */
+.page-button {
+    margin-right: 5px; /* Espaciado horizontal entre los botones */
+    padding: 5px 10px; /* Espacio alrededor del texto */
+    background-color: #3498db; /* Color de fondo predeterminado */
+    color: #fff; /* Color de texto predeterminado */
+    border: none; /* Sin borde */
+    text-decoration: none; /* Sin subrayado de enlace */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+    /* Estilo para el botón de página actual */
+    .page-button.current-page {
+        background-color: #e74c3c; /* Cambiar el color de fondo para resaltar */
+    }
+select {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.caja2 {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos en la parte superior del contenedor */
+}
+
+/* Establece un ancho fijo para cada columna */
+.col-md-4 {
+    flex: 1; /* Permite que cada columna ocupe el mismo espacio horizontal */
+    margin: 10px; /* Espacio entre las columnas (puedes ajustarlo según tus necesidades) */
+}
+.nav-link {
+    color: black;
+}
+    .nav-link.active {
+        color: red;
+    }
+.nav-tabs {
+    
+}
+.nav-item {
+    background-color:white;
+}

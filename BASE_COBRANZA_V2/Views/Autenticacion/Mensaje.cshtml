@@ -1,0 +1,19 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acceso Denegado</title>
+</head>
+<body>
+    <h1>Acceso Denegado</h1>
+    <p>No tienes permisos para acceder a esta página.</p>
+    <p>
+        <a asp-action="Index" asp-controller="Inicio" class="btn btn-outline-primary">Regresar</a>
+        <a asp-action="CerrarSesion" asp-controller="Autenticacion" class="btn btn-outline-dark">Salir</a>
+    </p>
+</body>
+</html>

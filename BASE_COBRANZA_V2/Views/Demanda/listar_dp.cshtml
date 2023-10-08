@@ -1,0 +1,103 @@
+﻿@model IEnumerable<BASE_COBRANZA_V2.Models.Beans.Base_General>
+
+@{
+    ViewData["Title"] = "Demandas Principales";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+    var stocks = ViewBag.stock as IEnumerable<BASE_COBRANZA_V2.Models.Beans.Stock>;
+    var statusPoderJudicial = ViewBag.StatusPoderJudicial as IEnumerable<BASE_COBRANZAS_V2.Models.Beans.status_poder_judicial>;
+    var cobranza = ViewBag.cobranza as IEnumerable<BASE_COBRANZAS_V2.Models.Beans.Pasos_cobranza>;
+    var demanda_pri = ViewBag.Demandas_principales as IEnumerable<BASE_COBRANZAS_V2.Models.Beans.Status_demanda_principal>;
+    decimal? Gasto_clientes_total = 0;
+    @foreach (var item in Model)
+    {
+        Gasto_clientes_total += item.GastosCobranza + item.GastosCochera_Total + item.Penalidad + item.Mora_Total;
+    }
+}
+
+<h1 class="font-weight-bold text-center">Demandas Principales</h1>
+
+<div class="caja">
+    <form asp-controller="Demanda" asp-action="listar_dp">
+        <p>
+            Buscar por nombre: <input type="text" name="Name" class="form-number" />
+            <input type="submit" value="Buscar" class="btn btn-sm btn-dark" />
+        </p>
+    </form>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr class="table-secondary">
+                <th class="text-center">
+                    Propietario
+                </th>
+                <th class="text-center">
+                    DNI
+                </th>
+                <th class="text-center">
+                    Dirección
+                </th>          
+                <th class="text-center">
+                    Pagaré
+                </th>
+                <th class="text-center">
+                    Fecha de cobro
+                </th>                
+                <th class="text-center">
+                    Número de expediente
+                </th>
+                <th class="text-center">
+                    Distrito de juzgado
+                </th>
+                <th class="text-center">Status de la demanda</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var stockItem = stocks.FirstOrDefault(stock => stock.ID_STOCK == item.IdStock);
+                var demand = demanda_pri.FirstOrDefault(dp => dp.ID_STATUS_DEMANDA_PRINCIPAL == item.IdDemandaPrincipal);
+                var pasoscobranza = cobranza.FirstOrDefault(cobranzas => cobranzas.ID_PASOS_COBRANZA == item.IdPasosCobranza);
+                var spjItem = statusPoderJudicial.FirstOrDefault(st => st.ID_STATUS_PODER_JUDICIAL == item.IdStatusPoderJudicial);
+                <tr>
+                    @if (stockItem != null)
+                    {
+                        <td class="text-center">
+                            @stockItem.NOMBRE_PROPIETARIO
+                        </td>
+                        <td class="text-center">
+                            @stockItem.DNI
+                        </td>
+                        <td class="text-center">
+                            @stockItem.DIRECCION
+                        </td>
+                        <td class="text-center">
+                            @stockItem.PAGARE
+                        </td>
+                    }
+                    <td class="text-center">@item.FechaCobro.ToShortDateString()</td>
+                    <td class="text-center">
+                        @item.NumeroExpediente
+                    </td>
+                    <td class="text-center">
+                        @item.DistritoJuzgado
+                    </td>
+                    @if (demand != null)
+                    {
+                        <td class="text-center">
+                            @demand.ACCION
+                        </td>
+                    }
+                    <td class="text-center">
+                        @Html.ActionLink(" Editar", "Edit", new { id=item.IdBase },new{@class="btn btn-primary bx bx-pencil",@role="button"})
+                    </td class="text-center">
+                    <td>@Html.ActionLink(" Detalle", "Detail", new { id=item.IdBase}, new{@class="btn btn-success bx bx-detail",@role="button"}) </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

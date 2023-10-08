@@ -1,0 +1,127 @@
+﻿@model IEnumerable<BASE_COBRANZA_V2.Models.Beans.Pago>
+
+@{
+    ViewData["Title"] = "Pagos";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+    var idBase = ViewData["IdBase"] as int?;
+    
+}
+
+<h1 class="font-weight-bold text-center">Pagos</h1>
+<br />
+<table class="table">
+    <thead>
+        <tr class="table-primary">
+            <th>
+                Monto(USD)
+            </th>
+            <th>
+               Tipo de pago
+            </th>
+            <th>
+                Cuenta bancaria
+            </th>
+            <th>
+                Número de operación
+            </th>
+            <th>
+                Fecha de pago
+            </th>
+            <th>
+                Instancia de pago
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>          
+            <td>
+               $ @Html.DisplayFor(modelItem => item.MONTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIPO_PAGO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CUENTA_BANCARIA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NUMERO_OPERACION)
+            </td>
+            <td>
+               @item.FECHA_PAGO.ToShortDateString()
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.INSTANCIA_PAGO)
+            </td>
+            <td>
+                    @Html.ActionLink("Editar", "EditarPago", new { idPago=item.ID_PAGO} , new{@class="btn btn-primary bx bx-pencil",@role="button",@id="EditarBoton"})
+                    
+            </td>
+            <td>
+                    @Html.ActionLink("Eliminar", "Delete", new { idPago=item.ID_PAGO }, new{@class="btn btn-success bx bx-detail",@role="button"})
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+<p>
+    <button type="button" id="RegistrarBoton" class="btn btn-warning" data-idbase="@idBase"><i class='bx bx-dollar'></i> Registrar Pago</button>
+
+</p>
+<form method="get" asp-action="Edit" asp-controller="Base_General">
+    <input type="hidden" name="id" value="@idBase" /> <!-- Campo oculto para el parámetro id -->
+    <button type="submit" class="btn btn-info">Regresar</button>
+</form>
+
+<div id="ContenedorRegistro"></div>
+<div id="EditarRegistro"></div>
+<script>
+    $(document).ready(function () {
+        // Cuando se hace clic en el botón "Registrar Pago", captura data-idbase
+        $("#RegistrarBoton").click(function (e) {
+            e.preventDefault(); // Evita la navegación predeterminada
+
+            // Obtiene el valor de data-idbase del botón
+            var idBase = $(this).data("idbase");
+
+            // Verifica si idBase es válido
+            if (idBase !== undefined) {
+                $.get('@Url.Action("RegistrarPago", "Base_General")', { idBase: idBase }, function (data) {
+                    $("#ContenedorRegistro").html(data);
+                });
+            } else {
+                console.log("ID_BASE no definido en el botón.");
+                // Maneja la situación en la que idBase no está definido
+            }
+        });
+
+        // Captura el clic en el enlace de edición
+        $("a.btn-primary.bx.bx-pencil").click(function (e) {
+            e.preventDefault(); // Evita la navegación predeterminada
+
+            // Obtiene el valor del parámetro id desde el href del enlace
+            var href = $(this).attr("href");
+            var idPago = href.split("/").pop(); // Obtiene el último segmento de la URL
+            if (idPago !== undefined) {
+                // Construye la URL completa con la ruta y el parámetro idPago
+                var urlEditarPago = '@Url.Action("EditarPago", "Base_General")?idPago=' + idPago;
+
+
+
+                // Realiza la solicitud AJAX
+                $.get(urlEditarPago, function (data) {
+                    $("#EditarRegistro").html(data);
+                });
+            } else {
+                console.log("El valor de idPago no está definido o es incorrecto.");
+                // Maneja la situación en la que idPago no está definido o es incorrecto
+            }
+        });
+
+        // Agrega un evento similar para cargar la vista parcial de Edit
+        // Asegúrate de pasar el ID correspondiente al controlador al hacer la solicitud AJAX
+    });
+</script>

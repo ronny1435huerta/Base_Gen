@@ -1,0 +1,284 @@
+﻿@model BASE_COBRANZA_V2.Models.Beans.Base_Stock
+
+@{
+    ViewData["Title"] = "Cobranzas extrajudiciales";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+
+
+<h1 class="font-weight-bold text-center">Cobranzas extrajudiciales</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none">
+                <label asp-for="IdBase" class="control-label"></label>
+                <input asp-for="IdBase" class="form-control" />
+                <span asp-validation-for="IdBase" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="ID_STOCK" class="control-label"></label>
+                <input asp-for="ID_STOCK" class="form-control" />
+                <span asp-validation-for="ID_STOCK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ALBUM" class="control-label">Album</label>
+                <input asp-for="ALBUM" class="form-control" />
+                <span asp-validation-for="ALBUM" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="FECHA_CONSIGNACION" class="control-label"></label>
+                <input asp-for="FECHA_CONSIGNACION" class="form-control" />
+                <span asp-validation-for="FECHA_CONSIGNACION" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="MARCA" class="control-label"></label>
+                <input asp-for="MARCA" class="form-control" />
+                <span asp-validation-for="MARCA" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="MODELO" class="control-label"></label>
+                <input asp-for="MODELO" class="form-control" />
+                <span asp-validation-for="MODELO" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="PRECIO_PACTADO" class="control-label"></label>
+                <input asp-for="PRECIO_PACTADO" class="form-control" />
+                <span asp-validation-for="PRECIO_PACTADO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CONTRATO" class="control-label">Número de contrato</label>
+                <input asp-for="CONTRATO" class="form-control" />
+                <span asp-validation-for="CONTRATO" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="DNI" class="control-label"></label>
+                <input asp-for="DNI" class="form-control" />
+                <span asp-validation-for="DNI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOMBRE_PROPIETARIO" class="control-label">Nombre del propietario</label>
+                <input asp-for="NOMBRE_PROPIETARIO" class="form-control" />
+                <span asp-validation-for="NOMBRE_PROPIETARIO" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="TIPO" class="control-label"></label>
+                <input asp-for="TIPO" class="form-control" />
+                <span asp-validation-for="TIPO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CELULAR" class="control-label">Celular</label>
+                <input asp-for="CELULAR" class="form-control" />
+                <span asp-validation-for="CELULAR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CORREO" class="control-label">Correo</label>
+                <input asp-for="CORREO" class="form-control" />
+                <span asp-validation-for="CORREO" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="DIRECCION" class="control-label"></label>
+                <input asp-for="DIRECCION" class="form-control" />
+                <span asp-validation-for="DIRECCION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DISTRITO" class="control-label">Distrito</label>
+                <select asp-for="DISTRITO" asp-items="@ViewBag.Distritos"></select>
+                <span asp-validation-for="DISTRITO" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="TIPO_PENALIDAD" class="control-label"></label>
+                <input asp-for="TIPO_PENALIDAD" class="form-control" />
+                <span asp-validation-for="TIPO_PENALIDAD" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="PAGARE" class="control-label"></label>
+                <input asp-for="PAGARE" class="form-control" />
+                <span asp-validation-for="PAGARE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaCobro" class="control-label">Fecha de cobro</label>
+                <input asp-for="FechaCobro" class="form-control" type="date" />
+                <span asp-validation-for="FechaCobro" class="date"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="IdStatusCliente" class="control-label"></label>
+                <input asp-for="IdStatusCliente" class="form-control" />
+                <span asp-validation-for="IdStatusCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="IdDemandaPrincipal" class="control-label"></label>
+                <input asp-for="IdDemandaPrincipal" class="form-control" />
+                <span asp-validation-for="IdDemandaPrincipal" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="FechaIngreso" class="control-label"></label>
+                <input asp-for="FechaIngreso" class="form-control" />
+                <span asp-validation-for="FechaIngreso" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="FechaArbitraje" class="control-label"></label>
+                <input asp-for="FechaArbitraje" class="form-control" />
+                <span asp-validation-for="FechaArbitraje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Penalidad" class="control-label">Penalidad($)</label>
+                <input asp-for="Penalidad" class="form-control" />
+                <span asp-validation-for="Penalidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mora" class="control-label">Mora diaria($)</label>
+                <select asp-for="Mora"  asp-items="@ViewBag.Mora_diaria"></select>
+                <span asp-validation-for="Mora" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="GastosCobranza" class="control-label"></label>
+                <input asp-for="GastosCobranza" class="form-control" />
+                <span asp-validation-for="GastosCobranza" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="GastosCochera" class="control-label"></label>
+                <input asp-for="GastosCochera" class="form-control" />
+                <span asp-validation-for="GastosCochera" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="FechaEmbargo" class="control-label"></label>
+                <input asp-for="FechaEmbargo" class="form-control" />
+                <span asp-validation-for="FechaEmbargo" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="StatusSunarp" class="control-label"></label>
+                <input asp-for="StatusSunarp" class="form-control" />
+                <span asp-validation-for="StatusSunarp" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="MarcaAutoCautelar" class="control-label"></label>
+                <input asp-for="MarcaAutoCautelar" class="form-control" />
+                <span asp-validation-for="MarcaAutoCautelar" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="ModeloAutoCautelar" class="control-label"></label>
+                <input asp-for="ModeloAutoCautelar" class="form-control" />
+                <span asp-validation-for="ModeloAutoCautelar" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="FechaAutoCautelar" class="control-label"></label>
+                <input asp-for="FechaAutoCautelar" class="form-control" />
+                <span asp-validation-for="FechaAutoCautelar" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="PartidaRegistralAutoCautelar" class="control-label"></label>
+                <input asp-for="PartidaRegistralAutoCautelar" class="form-control" />
+                <span asp-validation-for="PartidaRegistralAutoCautelar" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="PlacaAutoCautelar" class="control-label"></label>
+                <input asp-for="PlacaAutoCautelar" class="form-control" />
+                <span asp-validation-for="PlacaAutoCautelar" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="IdStatusJudicial" class="control-label"></label>
+                <input asp-for="IdStatusJudicial" class="form-control" />
+                <span asp-validation-for="IdStatusJudicial" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="IdStatusPoderJudicial" class="control-label"></label>
+                <input asp-for="IdStatusPoderJudicial" class="form-control" />
+                <span asp-validation-for="IdStatusPoderJudicial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPasosCobranza" class="control-label">Status de cobranza</label>
+                <select asp-for="IdPasosCobranza" asp-items="@ViewBag.Pasos_Cobranza"></select>
+                <span asp-validation-for="IdPasosCobranza" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="FechaIngresoMc" class="control-label"></label>
+                <input asp-for="FechaIngresoMc" class="form-control" />
+                <span asp-validation-for="FechaIngresoMc" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="FechaConcesorio" class="control-label"></label>
+                <input asp-for="FechaConcesorio" class="form-control" />
+                <span asp-validation-for="FechaConcesorio" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="IdApoderado" class="control-label"></label>
+                <input asp-for="IdApoderado" class="form-control" />
+                <span asp-validation-for="IdApoderado" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="IdProcurador" class="control-label"></label>
+                <input asp-for="IdProcurador" class="form-control" />
+                <span asp-validation-for="IdProcurador" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="TipoJuzgado" class="control-label"></label>
+                <input asp-for="TipoJuzgado" class="form-control" />
+                <span asp-validation-for="TipoJuzgado" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="DistritoJuzgado" class="control-label"></label>
+                <input asp-for="DistritoJuzgado" class="form-control" />
+                <span asp-validation-for="DistritoJuzgado" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="NumeroDeJuzgado" class="control-label"></label>
+                <input asp-for="NumeroDeJuzgado" class="form-control" />
+                <span asp-validation-for="NumeroDeJuzgado" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="NumeroExpediente" class="control-label"></label>
+                <input asp-for="NumeroExpediente" class="form-control" />
+                <span asp-validation-for="NumeroExpediente" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="CodigoCautelar" class="control-label"></label>
+                <input asp-for="CodigoCautelar" class="form-control" />
+                <span asp-validation-for="CodigoCautelar" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="NombreEspecialista" class="control-label"></label>
+                <input asp-for="NombreEspecialista" class="form-control" />
+                <span asp-validation-for="NombreEspecialista" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="MontoPetitorio" class="control-label"></label>
+                <input asp-for="MontoPetitorio" class="form-control" />
+                <span asp-validation-for="MontoPetitorio" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="IdTipoImpulso" class="control-label"></label>
+                <input asp-for="IdTipoImpulso" class="form-control" />
+                <span asp-validation-for="IdTipoImpulso" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="TipoSolicitudMedidaCautelar" class="control-label"></label>
+                <input asp-for="TipoSolicitudMedidaCautelar" class="form-control" />
+                <span asp-validation-for="TipoSolicitudMedidaCautelar" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="RespuestaMedidaCautelar" class="control-label"></label>
+                <input asp-for="RespuestaMedidaCautelar" class="form-control" />
+                <span asp-validation-for="RespuestaMedidaCautelar" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="Observaciones" class="control-label"></label>
+                <input asp-for="Observaciones" class="form-control" />
+                <span asp-validation-for="Observaciones" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="listar_cobranza" class="btn btn-warning">Cancelar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

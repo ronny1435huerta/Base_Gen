@@ -1,0 +1,249 @@
+﻿@model BASE_COBRANZA_V2.Models.Beans.Stock
+
+@{
+    ViewData["Title"] = "Base General";
+    Layout = "~/Views/Shared/_layoutMstr.cshtml";
+}
+<link href="~/css/Create_Base.css"/>
+<h1 class="font-weight-bold text-center">Base general</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none">
+                <label asp-for="ID_STOCK" class="control-label"></label>
+                <input asp-for="ID_STOCK" class="form-control" />
+                <span asp-validation-for="ID_STOCK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ALBUM" class="control-label"><i class='bx bx-photo-album'></i> Album</label>
+                <input asp-for="ALBUM" class="form-control" />
+                <span asp-validation-for="ALBUM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FECHA_CONSIGNACION" class="control-label"><i class='bx bxs-calendar'></i> Fecha de consignación</label>
+                <input asp-for="FECHA_CONSIGNACION" class="form-control" id="datepicker" type="date" />
+                <span asp-validation-for="FECHA_CONSIGNACION" class="date"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MARCA" class="control-label"><i class='bx bxs-store-alt'></i> Marca</label>
+                <input asp-for="MARCA" class="form-control" />
+                <span asp-validation-for="MARCA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MODELO" class="control-label"><i class='bx bxs-car'></i> Modelo</label>
+                <input asp-for="MODELO" class="form-control" />
+                <span asp-validation-for="MODELO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PRECIO_PACTADO" class="control-label"><i class='bx bx-dollar'></i> Precio pactado</label>
+                <input asp-for="PRECIO_PACTADO" class="form-control" />
+                <span asp-validation-for="PRECIO_PACTADO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CONTRATO" class="control-label"><i class='bx bxs-edit-alt' ></i> Contrato</label>
+                <input asp-for="CONTRATO" class="form-control" />
+                <span asp-validation-for="CONTRATO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DNI" class="control-label"><i class='bx bxs-id-card'></i> DNI</label>
+                <input asp-for="DNI" class="form-control" />
+                <span asp-validation-for="DNI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOMBRE_PROPIETARIO" class="control-label"><i class='bx bxs-user'></i> Nombre del propietario</label>
+                <input asp-for="NOMBRE_PROPIETARIO" class="form-control" />
+                <span asp-validation-for="NOMBRE_PROPIETARIO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TIPO" class="control-label"><i class='bx bx-bookmark'></i> Tipo</label>
+                <input asp-for="TIPO" class="form-control" />
+                <span asp-validation-for="TIPO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CELULAR" class="control-label"><i class='bx bx-phone'></i> Celular</label>
+                <input asp-for="CELULAR" class="form-control" />
+                <span asp-validation-for="CELULAR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CORREO" class="control-label"><i class='bx bx-envelope'></i> Correo</label>
+                <input asp-for="CORREO" class="form-control" />
+                <span asp-validation-for="CORREO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DIRECCION" class="control-label"><i class='bx bx-home'></i> Dirección</label>
+                <input asp-for="DIRECCION" class="form-control" />
+                <span asp-validation-for="DIRECCION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DISTRITO" class="control-label"><i class='bx bx-map-alt'></i> Distrito</label>
+                <select asp-for="DISTRITO" asp-items="@ViewBag.Distritos"></select>
+                <span asp-validation-for="DISTRITO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TIPO_PENALIDAD" class="control-label"><i class='bx bxs-error-alt'></i> Tipo de penalidad</label>
+                <select asp-for="TIPO_PENALIDAD" asp-items="@ViewBag.TipoPenalidad"></select>
+                <span asp-validation-for="TIPO_PENALIDAD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PAGARE" class="control-label"><i class='bx bx-question-mark'></i> Pagaré</label>
+                <select asp-for="PAGARE" asp-items="@ViewBag.Pagare"></select>
+                <span asp-validation-for="PAGARE" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary"  />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-sm-12">
+
+        <div class="card">
+            <div class="card-header"> Cargar Excel</div>
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <input class="form-control-file" type="file" id="inputExcel" />
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn btn-success" onclick="mostrarDatos()"><i class='bx bxs-file-doc'></i>Mostrar Datos</button>
+                        <button class="btn btn-warning" onclick="enviarDatos()"><i class='bx bxs-data'></i>Guardar Datos</button>
+                    </div>
+                </div>
+
+                <hr />
+    <div class="table-responsive">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="tbData" class="table table-striped">
+                            <thead>
+                                <tr class="table-secondary">
+                                    <th>ALBUM</th>
+                                    <th>FECHA DE CONSIGNACION</th>
+                                    <th>MARCA</th>
+                                    <th>MODELO</th>
+                                    <th>PRECIO PACTADO</th>
+                                    <th>CONTRATO</th>
+                                    <th>DNI</th>
+                                    <th>NOMBRE PROPIETARIO</th>
+                                    <th>TIPO</th>
+                                    <th>CELULAR</th>
+                                    <th>CORREO</th>
+                                    <th>DIRECCION</th>
+                                    <th>DISTRITO</th>
+                                    <th>TIPO DE PENALIDAD</th>
+                                    <th>PAGARE</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="listar_base" class="btn btn-toolbar">Cancelar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        function mostrarDatos() {
+            const input = document.getElementById("inputExcel");
+            const formData = new FormData();
+            formData.append("ArchivoExcel", input.files[0]);
+
+            fetch("/Base_General/MostrarDatos", {
+                method: "POST",
+                body: formData
+            })
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`Error en la solicitud: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then((dataJson) => {
+                    dataJson.forEach((item) => {
+                        const formattedDate = new Date(item.fechA_CONSIGNACION).toLocaleDateString("es-ES");
+                        $("#tbData tbody").append(
+                            $("<tr>").append(
+                                $("<td>").text(item.album),
+                                $("<td>").text(formattedDate), // Formatea la fecha
+                                $("<td>").text(item.marca),
+                                $("<td>").text(item.modelo),
+                                $("<td>").text(item.preciO_PACTADO),
+                                $("<td>").text(item.contrato),
+                                $("<td>").text(item.dni),
+                                $("<td>").text(item.nombrE_PROPIETARIO),
+                                $("<td>").text(item.tipo),
+                                $("<td>").text(item.celular),
+                                $("<td>").text(item.correo),
+                                $("<td>").text(item.direccion),
+                                $("<td>").text(item.distrito),
+                                $("<td>").text(item.tipO_PENALIDAD),
+                                $("<td>").text(item.pagare)
+                            )
+                        );
+                    });
+                })
+                .catch((error) => {
+                    console.error(error);
+                    console.log("Ocurrió un error al obtener los datos.");
+                });
+        }
+               
+        document.addEventListener("DOMContentLoaded", function () {
+            const datepickerInput = document.getElementById("datepicker");
+
+            // Obtener la fecha actual en el formato "YYYY-MM-DD"
+            const currentDate = new Date();
+            const year = currentDate.getFullYear();
+            const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+            const day = String(currentDate.getDate()).padStart(2, "0");
+            const formattedDate = `${year}-${month}-${day}`;
+
+            // Establecer el valor del campo de entrada en la fecha actual
+            datepickerInput.value = formattedDate;
+
+            datepickerInput.addEventListener("input", function () {
+                const enteredValue = datepickerInput.value;
+                const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+
+                if (!datePattern.test(enteredValue)) {
+                    // Puedes mostrar un mensaje de error o realizar otras acciones si lo deseas
+                }
+            });
+        });
+        function enviarDatos() {
+            const input = document.getElementById("inputExcel")
+
+            const formData = new FormData()
+
+            formData.append("ArchivoExcel", input.files[0])
+
+            fetch("/Base_General/EnviarDatos", {
+                method: "POST",
+                body: formData
+            })
+                .then((response) => { return response.json() })
+                .then((dataJson) => {
+
+                    alert(dataJson.mensaje);
+
+                })
+        }
+    </script>
+}

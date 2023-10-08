@@ -1,0 +1,164 @@
+﻿<!----------------------------------------------------------------------Creado por Ronny Huerta----------------------------------------------------------------------------->
+<!--_layoutMstr.cshtml-->
+<!DOCTYPE html>
+<html lang="es-pe" dir="ltr">
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+        <link rel="stylesheet" href="~/css/master.css" asp-append-version="true"/>
+        
+        <!-- Agrega el JavaScript de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!--Referencia a BoxIcons-->
+        
+        
+</head>
+<body>
+    <!--Logo de la barra de navegación-->
+    <div class="sidebarR closeR">
+        <div class="logoR-details">
+            <span class="logoR-name"></span>
+           <img src="~/img/rebel2.jpg"/>
+            
+        </div>
+        <!--Creamos las pestañas que se requieren-->
+        <ul class="custom-navR-links">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-grid-alt'></i>
+                    <span class="linkR_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-money-withdraw'></i>
+                    <span class="linkR_name">Liquidación</span>
+                </a>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bxl-firebase'></i>
+                        <span class="linkR_name">Bases por Área</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="subR-menu blankR">
+                    <li><a asp-controller="Base_General" asp-action="listar_base">Base General</a></li>
+                    <li><a asp-controller="Cobranza_Extrajudicial" asp-action="listar_cobranza">Cobranzas <br>Extrajudiciales</a></li>
+                    <li><a asp-controller="Medidas_Cautelares" asp-action="listar_mc">Medidas Cautelares</a></li>
+                    <li><a asp-controller="Expendientes_Ejecutar" asp-action="listar_exej">Expedientes <br>por ejecutar</a></li>
+                    <li><a asp-controller="Demanda" asp-action="listar_dp">Demandas principales</a></li>
+                    <li><a asp-controller="Juicios_arbitrales" asp-action="listar_ja">Juicios arbitrales</a></li>
+                    <li><a href="#">Ejecutar sunarp</a></li>
+                    <li><a href="#">Impulsos procuradores</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-task'></i>
+                    <span class="linkR_name">Tareas Pendientes</span>
+                </a>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bxs-business'></i>
+                        <span class="linkR_name">Contabilidad</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="subR-menu blankR">
+                    <li><a href="#">Clientes pagados</a></li>
+                    <li><a href="#">Abonos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-file-doc'></i>
+                    <span class="linkR_name">Reportes</span>
+                </a>
+            </li>
+            <li>
+                @if (User.IsInRole("ADMINISTRADOR"))
+                {
+                    <div class="icon-link">
+                        <a href="#">
+                            <i class='bx bx-edit-alt'></i>
+                            <span class="linkR_name">Mantenimiento</span>
+                        </a>
+                        <i class='bx bx-chevron-down arrow'></i>
+                    </div>
+                    <ul class="subR-menu blankR">
+                        <li><a asp-controller="Usuario" asp-action="listar_usuario">Usuarios</a></li>
+                        <li><a asp-controller="Status_judicial" asp-action="listar_status_judicial">Status interno<br>de las MC</a></li>
+                        <li><a asp-controller="Status_poder_judicial" asp-action="listar_status_poder_judicial">Status del PJ de MC</a></li>
+                        <li><a asp-controller="Status_arbitraje" asp-action="listar_status_arbitraje">Status arbitraje</a></li>
+                        <li><a asp-controller="Demanda_principal" asp-action="listar_demanda_principal">Status demandas<br>  principales</a></li>
+                        <li><a asp-controller="Procurador" asp-action="listar_procuradores">Procuradores</a></li>
+                        <li><a asp-controller="Apoderado" asp-action="listar_Apoderado">Apoderados</a></li>
+                        <li><a asp-controller="Tipo_impulso" asp-action="listar_tipo_impulso">Tipo de impulso</a></li>
+                        <li><a asp-controller="Pasos_cobranza" asp-action="listar_pasos_cobranza">Pasos de cobranza</a></li>
+                    </ul>
+                }
+            </li>
+            <li>
+                <div class="profileR-details">
+                    <div class="profileR-content">
+                        <img src="~/img/user.jpg" alt="profile">
+                    </div>
+                    <div class="nameR-job">
+                        <div class="profileR_name">@User.Identity.Name</div>
+
+                        <div class="jobR">Admin</div>
+                    </div>
+                    <a asp-controller="Autenticacion" asp-action="CerrarSesion"><i class='bx bx-log-out'></i></a>
+                    
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <section class="homeR-section">
+        <div class="homeR-content">
+            <i class='bx bx-menu'></i>
+            <span class="textR">Cobranzas</span>
+        </div>
+        <div class="containerR">
+            
+                    @RenderBody()
+               
+        </div>
+    </section>
+    @RenderSection("scripts", required: false)
+    </body>
+    
+</html>
+
+
+<script>
+    let arrow = document.querySelectorAll(".arrow");
+    console.log(arrow);
+    for (var index = 0; index < arrow.length; index++) {
+        arrow[index].addEventListener("click", (e) => {
+            console.log(e);
+            let arrowParent = e.target.parentElement.parentElement;
+            console.log(arrowParent);
+            arrowParent.classList.toggle("showMenu");
+        });
+
+    }
+    let sidebarR = document.querySelector(".sidebarR");
+    let sidebarRBtn = document.querySelector(".bx-menu");
+    console.log(sidebarRBtn);
+    sidebarRBtn.addEventListener("click", () => {
+        sidebarR.classList.toggle("closeR");
+    });
+
+</script>

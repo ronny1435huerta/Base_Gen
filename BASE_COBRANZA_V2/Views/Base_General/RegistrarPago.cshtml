@@ -1,0 +1,89 @@
+﻿@model BASE_COBRANZA_V2.Models.Beans.Pago
+@{
+    
+}
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="RegistrarPago">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none">
+                <label asp-for="ID_PAGO" class="control-label"></label>
+                <input asp-for="ID_PAGO" class="form-control" />
+                <span asp-validation-for="ID_PAGO" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label asp-for="ID_BASE" class="control-label"></label>
+                <input asp-for="ID_BASE" class="form-control" />
+                <span asp-validation-for="ID_BASE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MONTO" class="control-label">Monto</label>
+                <input asp-for="MONTO" class="form-control" />
+                <span asp-validation-for="MONTO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TIPO_PAGO" class="control-label">Tipo de pago</label>
+                <select asp-for="TIPO_PAGO" asp-items="@ViewBag.Tipo_Pago"></select>
+                <span asp-validation-for="TIPO_PAGO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CUENTA_BANCARIA" class="control-label">Cuenta Bancaria</label>
+                <input asp-for="CUENTA_BANCARIA" class="form-control" />
+                <span asp-validation-for="CUENTA_BANCARIA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NUMERO_OPERACION" class="control-label">Número de operación</label>
+                <input asp-for="NUMERO_OPERACION" class="form-control" />
+                <span asp-validation-for="NUMERO_OPERACION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FECHA_PAGO" class="control-label">Fecha de Pago</label>
+                <input asp-for="FECHA_PAGO" class="form-control" id="datepicker" type="date" />
+                <span asp-validation-for="FECHA_PAGO" class="date"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="INSTANCIA_PAGO" class="control-label">Instancia de Pago</label>
+                <select asp-for="INSTANCIA_PAGO" asp-items="@ViewBag.Instancia_Pago"></select>
+                <span asp-validation-for="INSTANCIA_PAGO" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="caja">
+            <div class="form-group">
+                <input type="submit" value="Registrar" name="ID_BASE" class="btn btn-outline-warning bxs-file-plus" />
+                    @Html.ActionLink(" Cancelar", "ListarPago", new { idBase=Model.ID_BASE },new{@class="btn btn-primary bx bx-pencil",@role="button"})
+            </div>           
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const datepickerInput = document.getElementById("datepicker");
+
+            // Obtener la fecha actual en el formato "YYYY-MM-DD"
+            const currentDate = new Date();
+            const year = currentDate.getFullYear();
+            const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+            const day = String(currentDate.getDate()).padStart(2, "0");
+            const formattedDate = `${year}-${month}-${day}`;
+
+            // Establecer el valor del campo de entrada en la fecha actual
+            datepickerInput.value = formattedDate;
+
+            datepickerInput.addEventListener("input", function () {
+                const enteredValue = datepickerInput.value;
+                const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+
+                if (!datePattern.test(enteredValue)) {
+                    // Puedes mostrar un mensaje de error o realizar otras acciones si lo deseas
+                }
+            });
+        });
+    </script>
+}
