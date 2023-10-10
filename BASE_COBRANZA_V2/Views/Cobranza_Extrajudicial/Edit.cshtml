@@ -8,8 +8,13 @@
 
 <h1 class="font-weight-bold text-center">Cobranzas extrajudiciales</h1>
 
+
 <div class="row">
     <div class="col-md-4">
+        <div class="caja">
+            <div></div>
+            <h5>Deuda a la fecha: $@Model.GastoTotal</h5>
+        </div>
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group" style="display:none">
@@ -92,6 +97,7 @@
                 <input asp-for="TIPO_PENALIDAD" class="form-control" />
                 <span asp-validation-for="TIPO_PENALIDAD" class="text-danger"></span>
             </div>
+            
             <div class="form-group" style="display:none">
                 <label asp-for="PAGARE" class="control-label"></label>
                 <input asp-for="PAGARE" class="form-control" />
@@ -149,7 +155,7 @@
             </div>
             <div class="form-group" style="display:none">
                 <label asp-for="StatusSunarp" class="control-label"></label>
-                <input asp-for="StatusSunarp" class="form-control" />
+                <select asp-for="StatusSunarp" class="form-control" asp-items="@ViewBag.StatusSunarp"></select>
                 <span asp-validation-for="StatusSunarp" class="text-danger"></span>
             </div>
             <div class="form-group" style="display:none">
@@ -254,12 +260,12 @@
             </div>
             <div class="form-group" style="display:none">
                 <label asp-for="TipoSolicitudMedidaCautelar" class="control-label"></label>
-                <input asp-for="TipoSolicitudMedidaCautelar" class="form-control" />
+                <select asp-for="TipoSolicitudMedidaCautelar" class="form-control" asp-items="@ViewBag.TipoSolicitudMedidaCautelar"></select>
                 <span asp-validation-for="TipoSolicitudMedidaCautelar" class="text-danger"></span>
             </div>
             <div class="form-group" style="display:none">
                 <label asp-for="RespuestaMedidaCautelar" class="control-label"></label>
-                <input asp-for="RespuestaMedidaCautelar" class="form-control" />
+                <select asp-for="RespuestaMedidaCautelar" class="form-control" asp-items="@ViewBag.TipoSolicitudMedidaCautelar"></select>
                 <span asp-validation-for="RespuestaMedidaCautelar" class="text-danger"></span>
             </div>
             <div class="form-group" style="display:none">

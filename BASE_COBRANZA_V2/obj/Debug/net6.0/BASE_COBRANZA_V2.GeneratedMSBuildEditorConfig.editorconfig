@@ -9,249 +9,249 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BASE_COBRANZA_V2
 build_property.RootNamespace = BASE_COBRANZA_V2
-build_property.ProjectDir = C:\Users\Ronny\Source\Repos\ronny1435huerta\Base_Gen\BASE_COBRANZA_V2\
+build_property.ProjectDir = C:\Users\Ronny\source\repos\ronny1435huerta\Base_Gen\BASE_COBRANZA_V2\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Ronny\Source\Repos\ronny1435huerta\Base_Gen\BASE_COBRANZA_V2
+build_property.MSBuildProjectDirectory = C:\Users\Ronny\source\repos\ronny1435huerta\Base_Gen\BASE_COBRANZA_V2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Apoderado/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Apoderado/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvZGVyYWRvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Apoderado/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Apoderado/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvZGVyYWRvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Apoderado/listar_Apoderado.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Apoderado/listar_Apoderado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvZGVyYWRvXGxpc3Rhcl9BcG9kZXJhZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Autenticacion/Logueo.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Autenticacion/Logueo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWNhY2lvblxMb2d1ZW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Autenticacion/Mensaje.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Autenticacion/Mensaje.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWNhY2lvblxNZW5zYWplLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzZV9HZW5lcmFsXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/Detail.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzZV9HZW5lcmFsXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzZV9HZW5lcmFsXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/EditarPago.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/EditarPago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzZV9HZW5lcmFsXEVkaXRhclBhZ28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/ListarPago.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/ListarPago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzZV9HZW5lcmFsXExpc3RhclBhZ28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/listar_base.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/listar_base.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzZV9HZW5lcmFsXGxpc3Rhcl9iYXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/RegistrarPago.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Base_General/RegistrarPago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzZV9HZW5lcmFsXFJlZ2lzdHJhclBhZ28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Cobranza_Extrajudicial/Detail.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Cobranza_Extrajudicial/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29icmFuemFfRXh0cmFqdWRpY2lhbFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Cobranza_Extrajudicial/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Cobranza_Extrajudicial/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29icmFuemFfRXh0cmFqdWRpY2lhbFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Cobranza_Extrajudicial/listar_cobranza.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Cobranza_Extrajudicial/listar_cobranza.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29icmFuemFfRXh0cmFqdWRpY2lhbFxsaXN0YXJfY29icmFuemEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Demanda/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Demanda/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kYVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Demanda/listar_dp.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Demanda/listar_dp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kYVxsaXN0YXJfZHAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Demanda_principal/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Demanda_principal/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kYV9wcmluY2lwYWxcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Demanda_principal/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Demanda_principal/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kYV9wcmluY2lwYWxcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Demanda_principal/listar_demanda_principal.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Demanda_principal/listar_demanda_principal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtYW5kYV9wcmluY2lwYWxcbGlzdGFyX2RlbWFuZGFfcHJpbmNpcGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Expendientes_Ejecutar/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Expendientes_Ejecutar/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5kaWVudGVzX0VqZWN1dGFyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Expendientes_Ejecutar/listar_exej.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Expendientes_Ejecutar/listar_exej.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5kaWVudGVzX0VqZWN1dGFyXGxpc3Rhcl9leGVqLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Home/Index.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Home/Privacy.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Juicios_arbitrales/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Juicios_arbitrales/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVpY2lvc19hcmJpdHJhbGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Juicios_arbitrales/listar_ja.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Juicios_arbitrales/listar_ja.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSnVpY2lvc19hcmJpdHJhbGVzXGxpc3Rhcl9qYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Medidas_Cautelares/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Medidas_Cautelares/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWRhc19DYXV0ZWxhcmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Medidas_Cautelares/listar_mc.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Medidas_Cautelares/listar_mc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWRhc19DYXV0ZWxhcmVzXGxpc3Rhcl9tYy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Pasos_cobranza/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Pasos_cobranza/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzb3NfY29icmFuemFcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Pasos_cobranza/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Pasos_cobranza/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzb3NfY29icmFuemFcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Pasos_cobranza/listar_pasos_cobranza.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Pasos_cobranza/listar_pasos_cobranza.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzb3NfY29icmFuemFcbGlzdGFyX3Bhc29zX2NvYnJhbnphLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Procurador/AsignarDistrito.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Procurador/AsignarDistrito.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY3VyYWRvclxBc2lnbmFyRGlzdHJpdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Procurador/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Procurador/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY3VyYWRvclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Procurador/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Procurador/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY3VyYWRvclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Procurador/listar_procuradores.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Procurador/listar_procuradores.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY3VyYWRvclxsaXN0YXJfcHJvY3VyYWRvcmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Rol/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Rol/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Rol/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Rol/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Rol/listar_rol.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Rol/listar_rol.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXGxpc3Rhcl9yb2wuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Shared/Error.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Shared/_layoutMstr.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Shared/_layoutMstr.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9sYXlvdXRNc3RyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_arbitraje/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_arbitraje/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHVzX2FyYml0cmFqZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_arbitraje/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_arbitraje/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHVzX2FyYml0cmFqZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_arbitraje/listar_status_arbitraje.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_arbitraje/listar_status_arbitraje.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHVzX2FyYml0cmFqZVxsaXN0YXJfc3RhdHVzX2FyYml0cmFqZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_judicial/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_judicial/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHVzX2p1ZGljaWFsXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_judicial/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_judicial/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHVzX2p1ZGljaWFsXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_judicial/listar_status_judicial.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_judicial/listar_status_judicial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHVzX2p1ZGljaWFsXGxpc3Rhcl9zdGF0dXNfanVkaWNpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_poder_judicial/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_poder_judicial/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHVzX3BvZGVyX2p1ZGljaWFsXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_poder_judicial/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_poder_judicial/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHVzX3BvZGVyX2p1ZGljaWFsXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_poder_judicial/listar_status_poder_judicial.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Status_poder_judicial/listar_status_poder_judicial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdHVzX3BvZGVyX2p1ZGljaWFsXGxpc3Rhcl9zdGF0dXNfcG9kZXJfanVkaWNpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Tipo_impulso/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Tipo_impulso/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb19pbXB1bHNvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Tipo_impulso/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Tipo_impulso/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb19pbXB1bHNvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Tipo_impulso/listar_tipo_impulso.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Tipo_impulso/listar_tipo_impulso.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb19pbXB1bHNvXGxpc3Rhcl90aXBvX2ltcHVsc28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Usuario/AsignarRol.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Usuario/AsignarRol.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBc2lnbmFyUm9sLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Usuario/Create.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Usuario/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Usuario/Edit.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Usuario/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Usuario/listar_usuario.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Usuario/listar_usuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xsaXN0YXJfdXN1YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/_ViewImports.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/_ViewStart.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ronny/Source/Repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Shared/_Layout.cshtml]
+[C:/Users/Ronny/source/repos/ronny1435huerta/Base_Gen/BASE_COBRANZA_V2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-q7amgkl3b2

@@ -46,6 +46,7 @@ namespace BASE_COBRANZA_V2.Controllers
         public async Task<IActionResult> Create()
         {
             ViewBag.Pagare = new SelectList(new List<string> { "SÍ", "NO" });
+            ViewBag.Tipo = new SelectList(new List<string> { "FIJO", "FIJO-PAGARÉ" });
             ViewBag.TipoPenalidad = new SelectList(new List<string> { "VENDIO POR CUENTA PROPIA", "YA NO VENDE SU CARRO", "AUTO CON PROBLEMAS DE PAPELES", "CLIENTE SIN DISPOIBILIDAD", "NO ACEPTA EL NUEVO PRECIO DEL MERCADO", "CLIENTE INUBICABLE / CAUSAL NUMERO 4" });      
             ViewBag.Distritos = new SelectList(await Task.Run(() => procuradorprocess.ListaDistrito()), "NOMBRE", "NOMBRE");
             return View(new Stock());
@@ -405,6 +406,8 @@ namespace BASE_COBRANZA_V2.Controllers
                 Observaciones = model.Observaciones,
 
             };
+            
+
             ViewBag.mensaje = stockprocess.Actualizar(stock);
             ViewBag.message = baseprocess.Actualizar(base_gen);
             return RedirectToAction("listar_base", "Base_General");

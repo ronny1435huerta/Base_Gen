@@ -106,6 +106,7 @@ namespace BASE_COBRANZA_V2.Controllers
                 Mora = base_general.Mora,
                 GastosCobranza = base_general.GastosCobranza,
                 GastosCochera = base_general.GastosCochera,
+                GastoTotal= base_general.GastoTotal,
                 FechaEmbargo = base_general.FechaEmbargo,
                 StatusSunarp = base_general.StatusSunarp,
                 MarcaAutoCautelar = base_general.MarcaAutoCautelar,
@@ -186,21 +187,26 @@ namespace BASE_COBRANZA_V2.Controllers
                 var status_arbitraje = status_arbitrajeprocess.ListaStatus_arbitraje().Select(sa => new SelectListItem { Value = sa.ID_STATUS_ARBITRAJE.ToString(), Text = sa.ACCION }).ToList();
                 var Demandas_principales = demandaprincipalprocess.ListaDemanda_principal().Select(dp => new SelectListItem { Value = dp.ID_STATUS_DEMANDA_PRINCIPAL.ToString(), Text = dp.ACCION }).ToList();
                 ViewBag.Pagare = new SelectList(new List<string> { "SÍ", "NO" });
+                ViewBag.TipoJuzgado = new SelectList(new List<string> { "PAZ LETRADO", "JUZGADO COMERCIAL" });
                 ViewBag.Tipo = new SelectList(new List<string> { "FIJO", "FIJO-PAGARÉ" });
                 ViewBag.StatusSunarp = new SelectList(new List<string> { "PENDIENTE", "NO TIENE NADA A CAUTELAR", "NO TIENE VEHÍCULO DE VALOR", "SÍ TIENE AUTO A CAUTELAR" });
+                ViewBag.TipoSolicitudMedidaCautelar = new SelectList(new List<string> { "RETENCIÓN", "INSCRIPCIÓN","SECUESTRO", "RETENCIÓN-INSCRIPCIÓN", "RETENCIÓN-SECUESTRO",
+                            "INSCRIPCIÓN-SECUESTRO", "RETENCIÓN-INSCRIPCIÓN-SECUESTRO" });
                 ViewBag.Mora_diaria = new SelectList(new List<decimal> { 15.00m, 20.00m, 40.00m });
+                ViewBag.Gastos_cobranza = new SelectList(new List<decimal> { 200.00m, 400.00m, 500.00m, 800.00m, 1000.00m });
                 ViewBag.Status_judicial = status_judicial;
                 ViewBag.Status_poder_judicial = status_poder_judicial;
+                ViewBag.Demandas_principales = Demandas_principales;
                 ViewBag.Pasos_Cobranza = Pasos_Cobranza;
                 ViewBag.Apoderados = apoderados;
                 ViewBag.Procuradores = Procurador;
                 ViewBag.Status_arbitraje = status_arbitraje;
                 ViewBag.Distritos = Distritos;
                 ViewBag.Tipo_Impulso = Tipo_Impulso;
-                ViewBag.Demandas_principales = Demandas_principales;
                 //retornamos
                 return View(model);
             }   //fin de la condicion...
+
             Stock stock = new Stock
             {
                 ID_STOCK = model.ID_STOCK,
@@ -221,6 +227,7 @@ namespace BASE_COBRANZA_V2.Controllers
                 PAGARE = model.PAGARE,
 
             };
+            
             Base_General base_gen = new Base_General
             {
                 IdBase = model.IdBase,
@@ -261,6 +268,7 @@ namespace BASE_COBRANZA_V2.Controllers
                 Observaciones = model.Observaciones,
 
             };
+          
             ViewBag.mensaje = stockprocess.Actualizar(stock);
             ViewBag.message = baseprocess.Actualizar(base_gen);
             return RedirectToAction("listar_cobranza", "Cobranza_Extrajudicial");
