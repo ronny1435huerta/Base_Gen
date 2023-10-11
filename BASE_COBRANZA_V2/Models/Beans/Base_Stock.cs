@@ -70,7 +70,6 @@ namespace BASE_COBRANZA_V2.Models.Beans
         public decimal? GastosCobranza { get; set; }
         [Required]
         public decimal? GastosCochera { get; set; }
-        [Required]
         public decimal? GastoTotal { get; set; }
         [Required]
         public DateTime FechaEmbargo { get; set; }

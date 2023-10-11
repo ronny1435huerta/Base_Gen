@@ -152,6 +152,8 @@ namespace BASE_COBRANZA_V2.Controllers
             ViewBag.Pagare = new SelectList(new List<string> { "SÍ", "NO" });
             ViewBag.Tipo = new SelectList(new List<string> { "FIJO", "FIJO-PAGARÉ" });
             ViewBag.StatusSunarp = new SelectList(new List<string> { "PENDIENTE", "NO TIENE NADA A CAUTELAR", "NO TIENE VEHÍCULO DE VALOR", "SÍ TIENE AUTO A CAUTELAR" });
+            ViewBag.TipoSolicitudMedidaCautelar = new SelectList(new List<string> { "RETENCIÓN", "INSCRIPCIÓN","SECUESTRO", "RETENCIÓN-INSCRIPCIÓN", "RETENCIÓN-SECUESTRO",
+                            "INSCRIPCIÓN-SECUESTRO", "RETENCIÓN-INSCRIPCIÓN-SECUESTRO" });
             ViewBag.Mora_diaria = new SelectList(new List<decimal> { 15.00m, 20.00m, 40.00m });
             ViewBag.Gastos_cobranza = new SelectList(new List<decimal> { 200.00m, 400.00m, 500.00m, 800.00m, 1000.00m });
             ViewBag.Status_judicial = status_judicial;
